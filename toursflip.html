@@ -1,0 +1,64 @@
+<!-- src/frontend/tours.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tours | MFLIP ADVENTURES SAFARIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="stylesflip.css">
+  <script defer src="toursflip.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="homeflip.html" class="logo">MFLIP<span>ADVENTURES</span></a>
+    <nav>
+      <ul>
+        <li><a href="toursflip.html">Tours</a></li>
+        <li><a href="testimonialsflip.html">Testimonials</a></li>
+        <li><a href="faqsflip.html">FAQs</a></li>
+        <li><a class="btn btn-primary" href="#book">Book now</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="page-header">
+      <h1>Our Tours</h1>
+      <p>Filter by date, price, and category.</p>
+    </section>
+
+    <aside class="filters">
+      <form id="filterForm" class="filters-form">
+        <label>
+          <span>Category</span>
+          <select name="category" id="filterCategory">
+            <option value="">All</option>
+            <option value="wildlife">Wildlife</option>
+            <option value="hiking">Hiking</option>
+            <option value="culture">Culture</option>
+            <option value="coast">Coast</option>
+          </select>
+        </label>
+        <label>
+          <span>Sort</span>
+          <select name="sort" id="filterSort">
+            <option value="date">Date</option>
+            <option value="price">Price</option>
+          </select>
+        </label>
+        <label>
+          <span>Start after</span>
+          <input type="date" id="filterStartDate">
+        </label>
+      </form>
+    </aside>
+
+    <section id="toursGrid" class="card-grid">
+      <!-- Cards injected by JS -->
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; MFLIP ADVENTURES 2026</p>
+  </footer>
+  <a href="https://wa.me/254714456493" id="whatsappWidget" class="whatsapp-widget">Chat</a>
+</body>
+</html>

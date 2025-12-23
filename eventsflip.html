@@ -1,0 +1,74 @@
+<!-- src/admin/events.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Events | MFLIP ADVENTURES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="adminflip.css">
+  <script defer src="js/admin-events.js"></script>
+</head>
+<body>
+  <header class="admin-header"><h1>Events</h1></header>
+  <main class="admin-main">
+    <section class="panel">
+      <form id="eventForm" class="admin-form">
+        <h2>Create / Edit Event</h2>
+        <label>Title <input name="title" required></label>
+        <label>Slug <input name="slug" required placeholder="latestmfliptoursadventurs2026 "></label>
+        <label>Description <textarea name="description" required></textarea></label>
+        <label>Start Date <input type="datetime-local" name="startDate" required></label>
+        <label>End Date <input type="datetime-local" name="endDate" required></label>
+        <label>Capacity <input type="number" name="capacity" required></label>
+        <label>Price (KES) <input type="number" name="price" required></label>
+        <label>Location <input name="location" required></label>
+        <label>Categories <input name="categories" placeholder="comma-separated"></label>
+        <label>Tags <input name="tags" placeholder="comma-separated"></label>
+
+        <fieldset>
+          <legend>Offer</legend>
+          <label><input type="checkbox" name="offer.isActive"> Active</label>
+          <label>Discount type
+            <select name="offer.discountType">
+              <option value="percent">Percent</option>
+              <option value="flat">Flat</option>
+            </select>
+          </label>
+          <label>Discount value <input type="number" name="offer.discountValue"></label>
+          <label>Expires at <input type="datetime-local" name="offer.expiresAt"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Group discount</legend>
+          <label><input type="checkbox" name="offer.groupDiscount.isActive"> Active</label>
+          <label>Threshold <input type="number" name="offer.groupDiscount.threshold" value="5"></label>
+          <label>Type
+            <select name="offer.groupDiscount.discountType">
+              <option value="percent">Percent</option>
+              <option value="flat">Flat</option>
+            </select>
+          </label>
+          <label>Value <input type="number" name="offer.groupDiscount.discountValue" value="10"></label>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>All Events</h2>
+      <table class="admin-table" id="eventsTable">
+        <thead>
+          <tr>
+            <th>Title</th><th>Start</th><th>Capacity</th><th>Price</th><th>Offer</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody><!-- rows injected --></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+<footer>
+  &copy;MFLIP ADVENTURES SAFARIS 2026
+</footer>
+</html>

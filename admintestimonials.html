@@ -1,0 +1,31 @@
+<!-- src/admin/testimonials.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Testimonials | MFLIP ADVENTURES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="adminflip.css">
+  <script defer src="js/admin-testimonials.js"></script>
+</head>
+<body>
+  <header class="admin-header"><h1>Testimonials</h1></header>
+  <main class="admin-main">
+    <section class="panel">
+      <form id="testimonialForm" class="admin-form">
+        <label>Name <input name="name"></label>
+        <label>Photo URL <input name="photo"></label>
+        <label>Rating <input type="number" name="rating" min="1" max="5"></label>
+        <label>Text <textarea name="text"></textarea></label>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </section>
+    <section class="panel">
+      <table class="admin-table" id="testimonialsTable">
+        <thead><tr><th>Name</th><th>Rating</th><th>Text</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

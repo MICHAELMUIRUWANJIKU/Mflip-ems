@@ -1,0 +1,7 @@
+/* src/frontend/css/theme.css */
+:root {
+  --color-primary: #2F3E46;
+  --color-accent: #D9A21B;
+  --color-bg: #F1F5F9;
+  --color-text: #1F2937;
+}

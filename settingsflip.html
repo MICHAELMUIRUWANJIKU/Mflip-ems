@@ -1,0 +1,36 @@
+<!-- src/admin/settings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings | MFLIP ADVENTURES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="adminflip.css">
+  <script defer src="js/admin-settings.js"></script>
+</head>
+<body>
+  <header class="admin-header"><h1>Settings</h1></header>
+  <main class="admin-main">
+    <form id="settingsForm" class="admin-form">
+      <fieldset><legend>Social & WhatsApp</legend>
+        <label>Instagram <input name="social.instagram"></label>
+        <label>Facebook <input name="social.facebook"></label>
+        <label>Twitter <input name="social.twitter"></label>
+        <label>WhatsApp number <input name="whatsappNumber" placeholder="2547..."></label>
+      </fieldset>
+      <fieldset><legend>Business</legend>
+        <label>Hours <input name="businessHours"></label>
+      </fieldset>
+      <fieldset><legend>Payments</legend>
+        <label>Stripe key <input name="stripeKey"></label>
+        <label>Webhook secret <input name="stripeWebhook"></label>
+      </fieldset>
+      <fieldset><legend>Analytics</legend>
+        <label>GA4 ID <input name="ga4" placeholder="googletag ID"></label>
+        <label>Facebook Pixel <input name="fbPixel"></label>
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </main>
+</body>
+</html>

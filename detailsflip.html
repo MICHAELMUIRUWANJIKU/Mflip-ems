@@ -1,0 +1,62 @@
+<!-- src/frontend/tour-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Detail | MFLIP ADVENTURES SAFARIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="stylesflip.css">
+  <script defer src="detailflip.js"></script>
+  <script defer src="bookingflip.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="homeflip.html" class="logo">MFLIP<span>ADVENTURES</span></a>
+  </header>
+  <main>
+    <article id="tourDetail" class="tour-detail">
+      <div class="detail-header">
+        <h1 id="tourTitle">Loading...</h1>
+        <div class="countdown" id="countdown"></div>
+      </div>
+
+      <div class="gallery" id="tourGallery"></div>
+
+      <section class="detail-info">
+        <p id="tourDescription"></p>
+        <div id="itinerary"></div>
+        <div id="map"></div>
+        <div class="meta">
+          <p>Date: <time id="tourDate"></time></p>
+          <p>Seats left: <span id="seats"></span></p>
+          <p>Price: <span id="price"></span></p>
+          <p id="groupDiscount"></p>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <h2>Reviews</h2>
+        <!-- Reviews injected -->
+      </section>
+
+      <section class="booking" id="book">
+        <h2>Book this tour</h2>
+        <form id="bookingForm" class="booking-form">
+          <label>Group size
+            <input type="number" id="groupSize" name="groupSize" min="1" value="1" required>
+          </label>
+          <div class="total-row">
+            <p>Total: <strong id="totalPrice">—</strong></p>
+            <p class="savings" id="savings"></p>
+          </div>
+          <label>Name <input name="name" required></label>
+          <label>Email <input name="email" type="email" required></label>
+          <label>Phone <input name="phone" required></label>
+          <button type="submit" class="btn btn-primary">Book Now</button>
+        </form>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer"><p>&copy; MFLIP ADVENTURES 2026</p></footer>
+</body>
+</html>

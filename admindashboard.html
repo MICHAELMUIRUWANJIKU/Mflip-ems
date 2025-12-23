@@ -1,0 +1,44 @@
+<!-- src/admin/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | MFLIP ADVENTURES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="adminflip.css">
+  <script defer src="adminflip.js"></script>
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Dashboard</h1>
+    <nav>
+      <a href="eventsflip.html">Events</a>
+      <a href="offersflip.html">Offers</a>
+      <a href="bookingsflip.html">Bookings</a>
+      <a href="testimonialsflip.html">Testimonials</a>
+      <a href="faqsflip.html">FAQs</a>
+      <a href="uploadsflip.html">Uploads</a>
+      <a href="settingsflip.html">Settings</a>
+    </nav>
+  </header>
+  <main class="admin-main">
+    <section class="kpis">
+      <div class="kpi"><strong id="kpiVisitors">0</strong><span>Visitors</span></div>
+      <div class="kpi"><strong id="kpiBookings">0</strong><span>Bookings</span></div>
+      <div class="kpi"><strong id="kpiRevenue">KES 0</strong><span>Revenue</span></div>
+    </section>
+    <section class="panel">
+      <h2>Upcoming events</h2>
+      <ul id="adminUpcoming"></ul>
+    </section>
+    <section class="panel">
+      <h2>Pending bookings</h2>
+      <ul id="adminPending"></ul>
+    </section>
+    <section class="panel">
+      <h2>Messages</h2>
+      <ul id="adminMessages"></ul>
+    </section>
+  </main>
+</body>
+</html>
